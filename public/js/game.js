@@ -56,7 +56,7 @@ function startGame()
 function updateDifficultySmooth()
 {
     if (gameRunning) {
-        gameSpeed += 0.0008; // smooth increase
+        gameSpeed += 0.0008;
         speedLevelElement.textContent = gameSpeed.toFixed(2);
     }
 }
@@ -85,13 +85,11 @@ restartButton.addEventListener('click', function() {
     restartGame();
 });
 
-// Item spawn interval (NO difficulty logic here)
 setInterval(() => {
     if (gameRunning) {
         createItem();
     }
 }, 900);
 
-// Initial static frame
 drawBackground();
 drawBasket();
